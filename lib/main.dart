@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// PERBAIKAN 1: Tambahkan titik koma di akhir import
+import 'screens/login_screen.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // PERBAIKAN 1: Tambahkan ColorScheme
+        // PERBAIKAN 2: Tambahkan nama Class "ColorScheme" sebelum .fromSeed
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      // Jika kamu ingin langsung ke halaman Login, ganti MyHomePage menjadi LoginScreen()
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -47,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          // PERBAIKAN 2: Tambahkan MainAxisAlignment
+          // PERBAIKAN 3: Tambahkan nama Enum "MainAxisAlignment" sebelum .center
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
